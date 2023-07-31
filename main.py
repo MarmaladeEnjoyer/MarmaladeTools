@@ -9,6 +9,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='+', intents=intents, case_insenitivity=True)
 
+
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user.name}')
@@ -34,6 +35,46 @@ async def delete(ctx, channel: discord.TextChannel):
   if ctx.author.guild_permissions.manage_channels:
     await ctx.send(embed=embed)
     await channel.delete()
+    
+#Create Category
+@bot.command()
+async def category(ctx, CategoryName):
+  
+  embed=discord.Embed(title="Channel Created", description=f"Category {CategoryName} was made", color=0x7a8ad8)
+  embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
+  if ctx.author.guild_permissions.manage_channels:
+    await ctx.send(embed=embed)
+    await ctx.guild.create_category(name=CategoryName)
+    
+#Change Description
+@bot.command()
+async def describe(ctx, textchannel: discord.TextChannel, *, newDesc):
+  
+  embed=discord.Embed(title="Channel Created", description=f"{textchannel} was updated", color=0x7a8ad8)
+  embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
+  if ctx.author.guild_permissions.manage_channels:
+    await ctx.send(embed=embed)
+    await textchannel.edit(topic=newDesc)
+
+#Clear Description
+@bot.command()
+async def cleardesc(ctx, textchannel: discord.TextChannel):
+  
+  embed=discord.Embed(title="Channel Created", description=f"{textchannel} was updated", color=0x7a8ad8)
+  embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
+  if ctx.author.guild_permissions.manage_channels:
+    await ctx.send(embed=embed)
+    await textchannel.edit(topic=None)
+    
+#Rename Channel
+@bot.command()
+async def rename(ctx, channel: discord.TextChannel, newname):
+  
+  embed=discord.Embed(title="Channel Created", description=f"{channel} was renamed to {newname}", color=0x7a8ad8)
+  embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
+  if ctx.author.guild_permissions.manage_channels:
+    await ctx.send(embed=embed)
+    await channel.edit(name=newname)
 
 #Move Channel Category
 @bot.command()
@@ -99,21 +140,49 @@ async def derole(ctx, RoleName: discord.Role):
 #Add role to someone - no embed
 @bot.command(pass_context=True)
 async def give(ctx, role: discord.Role, user: discord.Member):
-    if ctx.author.guild_permissions.manage_roles:
-        await user.add_roles(role)
+  if ctx.author.guild_permissions.manage_roles:
+    await user.add_roles(role)
 
 #Remove role from someone - no embed
 @bot.command(pass_context=True)
 async def yoinks(ctx, role: discord.Role, user: discord.Member):
-    if ctx.author.guild_permissions.manage_roles:
-        await user.remove_roles(role)
+  if ctx.author.guild_permissions.manage_roles:
+    await user.remove_roles(role)
 
 #Purge messages
 @bot.command()
 @commands.has_permissions(manage_channels=True)
 async def purge(ctx, limit: int):
   await ctx.channel.purge(limit=limit + 1)
-    
+
+#See what people are saying (Stalker???)
+'''
+@bot.event
+async def on_message(message: discord.Message):
+    if message.guild is None and not message.author.bot:
+        #channel = client.get_channel('YOUR CHANNEL ID')
+        content = message.content
+        author = message.author.name
+
+        await channel.send(f"{author}  ({message.author.id})\n\n{content}")
+
+    print(
+        message.author, ':', message.content, '(', message.author.id, ')'
+    )
+
+    await bot.process_commands(message)
+    '''
+
+
+
+#User Info
+@bot.command()
+async def info(ctx, everyone: discord.User):
+    embed=discord.Embed(title=f'{everyone}',description=f"ID: {everyone.id}\nDate Account Created: {everyone.created_at}", color=0xf5c211)
+    embed.set_thumbnail(url=everyone.avatar)
+    await ctx.send(embed=embed)
+  
+
 
 restore()
 bot.run('Your Token')
