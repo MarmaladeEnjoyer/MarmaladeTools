@@ -6,6 +6,10 @@ Prefix: +
 # Commands
 - Create ```<Name>``` ```<Category>``` ```<Topic>``` (Creates a new channel)
 - Delete ```<Channel>``` (Deletes a channel)
+- Rename ```<Channel>``` ```<Name>``` (Renames a channel)
+- Describe ```<Channel>``` ```<Description>``` (Changes the description of a channel)
+- Cleardesc ```<Channel>``` (Clear the description from a channel)
+- Category ```<Name>``` (Creates a new category)
 - Vc ```<Name>``` ```<Category>``` (Creates a voice channel)
 - Dvc ```<Name>``` (Deletes a voice channel)
 - Mvchannel ```<Channel>``` ```<Category>``` (Moves a channel to a different category)
@@ -15,6 +19,7 @@ Prefix: +
 - Give ```<User>``` ```<Role>``` (Gives user a role)
 - Yoinks ```<Role>``` ```<User>``` (Remove a role from someone)
 - Purge ```<Number>``` (Deletes certain amount of messages in channel)
+- Info ```<User>``` (Lists some info about the user mentioned)
 
  [Invite](https://discord.com/api/oauth2/authorize?client_id=1135397616448979008&permissions=8&scope=bot)
 
