@@ -88,13 +88,23 @@ async def role(ctx, RoleName):
 
 #Delete Role
 @bot.command()
-async def role(ctx, RoleName: discord.Role):
+async def derole(ctx, RoleName: discord.Role):
   
   embed=discord.Embed(title="Channel Created", description=f"Role {RoleName} was deleted", color=0x7a8ad8)
   embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
   if ctx.author.guild_permissions.manage_roles:
     await ctx.send(embed=embed)
     await ctx.RoleName.delete()
+
+#Add role to someone - no embed
+@bot.command(pass_context=True)
+async def give(ctx, role: discord.Role, user: discord.Member):
+    await user.add_roles(role)
+
+#Remove role from someone - no embed
+@bot.command(pass_context=True)
+async def yoinks(ctx, role: discord.Role, user: discord.Member):
+    await user.remove_roles(role)
     
 
 restore()
