@@ -12,6 +12,6 @@ Prefix: +
 - Role <Name> (Creates a role)
 - Derole <Role> (Deletes a role)
 - Give <User> <Role> (Gives user a role)
-- Yoinks <Role> <User> 
+- Yoinks <Role> <User> (Remove a role from someone)
 - Purge <Number> (Deletes certain amount of messages in channel)
 
