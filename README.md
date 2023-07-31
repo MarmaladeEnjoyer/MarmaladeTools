@@ -10,6 +10,7 @@ Prefix: +
 - Describe ```<Channel>``` ```<Description>``` (Changes the description of a channel)
 - Cleardesc ```<Channel>``` (Clear the description from a channel)
 - Category ```<Name>``` (Creates a new category)
+- Decategory ```<Category>``` (Deletes a category)
 - Vc ```<Name>``` ```<Category>``` (Creates a voice channel)
 - Dvc ```<Name>``` (Deletes a voice channel)
 - Mvchannel ```<Channel>``` ```<Category>``` (Moves a channel to a different category)
