@@ -99,12 +99,14 @@ async def derole(ctx, RoleName: discord.Role):
 #Add role to someone - no embed
 @bot.command(pass_context=True)
 async def give(ctx, role: discord.Role, user: discord.Member):
-    await user.add_roles(role)
+    if ctx.author.guild_permissions.manage_roles:
+        await user.add_roles(role)
 
 #Remove role from someone - no embed
 @bot.command(pass_context=True)
 async def yoinks(ctx, role: discord.Role, user: discord.Member):
-    await user.remove_roles(role)
+    if ctx.author.guild_permissions.manage_roles:
+        await user.remove_roles(role)
     
 
 restore()
