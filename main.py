@@ -45,6 +45,16 @@ async def category(ctx, CategoryName):
   if ctx.author.guild_permissions.manage_channels:
     await ctx.send(embed=embed)
     await ctx.guild.create_category(name=CategoryName)
+
+#Delete Category
+@bot.command()
+async def decategory(ctx, category: discord.CategoryChannel):
+  
+  embed=discord.Embed(title="Channel Created", description=f"Category {category} was deleted", color=0x7a8ad8)
+  embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
+  if ctx.author.guild_permissions.manage_channels:
+    await ctx.send(embed=embed)
+    await category.delete()
     
 #Change Description
 @bot.command()
