@@ -21,7 +21,7 @@ async def on_ready():
 async def create(ctx, name, channel: discord.CategoryChannel=None, description=None):
   
   embed=discord.Embed(title="Channel Created", description=f"{name} was made", color=0x7a8ad8)
-  embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
+  
   if ctx.author.guild_permissions.manage_channels:
     await ctx.send(embed=embed)
     await ctx.guild.create_text_channel(name=name, category=channel, topic=description)
@@ -31,7 +31,7 @@ async def create(ctx, name, channel: discord.CategoryChannel=None, description=N
 async def delete(ctx, channel: discord.TextChannel):
   
   embed=discord.Embed(title="Channel Created", description=f"{channel} was deleted", color=0x7a8ad8)
-  embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
+  
   if ctx.author.guild_permissions.manage_channels:
     await ctx.send(embed=embed)
     await channel.delete()
@@ -41,7 +41,7 @@ async def delete(ctx, channel: discord.TextChannel):
 async def category(ctx, CategoryName):
   
   embed=discord.Embed(title="Channel Created", description=f"Category {CategoryName} was made", color=0x7a8ad8)
-  embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
+  
   if ctx.author.guild_permissions.manage_channels:
     await ctx.send(embed=embed)
     await ctx.guild.create_category(name=CategoryName)
@@ -51,7 +51,7 @@ async def category(ctx, CategoryName):
 async def decategory(ctx, category: discord.CategoryChannel):
   
   embed=discord.Embed(title="Channel Created", description=f"Category {category} was deleted", color=0x7a8ad8)
-  embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
+  
   if ctx.author.guild_permissions.manage_channels:
     await ctx.send(embed=embed)
     await category.delete()
@@ -61,7 +61,7 @@ async def decategory(ctx, category: discord.CategoryChannel):
 async def describe(ctx, textchannel: discord.TextChannel, *, newDesc):
   
   embed=discord.Embed(title="Channel Created", description=f"{textchannel} was updated", color=0x7a8ad8)
-  embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
+  
   if ctx.author.guild_permissions.manage_channels:
     await ctx.send(embed=embed)
     await textchannel.edit(topic=newDesc)
@@ -71,7 +71,7 @@ async def describe(ctx, textchannel: discord.TextChannel, *, newDesc):
 async def cleardesc(ctx, textchannel: discord.TextChannel):
   
   embed=discord.Embed(title="Channel Created", description=f"{textchannel} was updated", color=0x7a8ad8)
-  embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
+  
   if ctx.author.guild_permissions.manage_channels:
     await ctx.send(embed=embed)
     await textchannel.edit(topic=None)
@@ -81,7 +81,7 @@ async def cleardesc(ctx, textchannel: discord.TextChannel):
 async def rename(ctx, channel: discord.TextChannel, newname):
   
   embed=discord.Embed(title="Channel Created", description=f"{channel} was renamed to {newname}", color=0x7a8ad8)
-  embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
+  
   if ctx.author.guild_permissions.manage_channels:
     await ctx.send(embed=embed)
     await channel.edit(name=newname)
@@ -91,7 +91,7 @@ async def rename(ctx, channel: discord.TextChannel, newname):
 async def mvchannel(ctx, textchannel: discord.TextChannel, channel: discord.CategoryChannel):
   
   embed=discord.Embed(title="Channel Created", description=f"{textchannel} was moved to {channel}", color=0x7a8ad8)
-  embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
+  
   if ctx.author.guild_permissions.manage_channels:
     await ctx.send(embed=embed)
     await textchannel.edit(category = channel)
@@ -99,7 +99,7 @@ async def mvchannel(ctx, textchannel: discord.TextChannel, channel: discord.Cate
 @bot.command()
 async def position(ctx, textchannel: discord.TextChannel, *, newpos):
   embed=discord.Embed(title="Channel Created", description=f"{textchannel} was moved to position {newpos}", color=0x7a8ad8)
-  embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
+  
   if ctx.author.guild_permissions.manage_channels:
     newpos = int(newpos)
     math.ceil(newpos)
@@ -112,7 +112,7 @@ async def position(ctx, textchannel: discord.TextChannel, *, newpos):
 async def vc(ctx, name, channel: discord.CategoryChannel=None):
   
   embed=discord.Embed(title="Channel Created", description=f"Voice Channel {name} was made", color=0x7a8ad8)
-  embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
+  
   if ctx.author.guild_permissions.manage_channels:
     await ctx.send(embed=embed)
     await ctx.guild.create_voice_channel(name=name, category=channel)
@@ -122,7 +122,7 @@ async def vc(ctx, name, channel: discord.CategoryChannel=None):
 async def dvc(ctx, channel: discord.VoiceChannel):
   
   embed=discord.Embed(title="Channel Created", description=f"Voice Channel {channel} was deleted", color=0x7a8ad8)
-  embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
+  
   if ctx.author.guild_permissions.manage_channels:
     await ctx.send(embed=embed)
     await channel.delete()
@@ -132,7 +132,7 @@ async def dvc(ctx, channel: discord.VoiceChannel):
 async def role(ctx, RoleName):
   
   embed=discord.Embed(title="Channel Created", description=f"Role {RoleName} was made", color=0x7a8ad8)
-  embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
+  
   if ctx.author.guild_permissions.manage_roles:
     await ctx.send(embed=embed)
     await ctx.guild.create_role(name=RoleName)
@@ -142,7 +142,7 @@ async def role(ctx, RoleName):
 async def derole(ctx, RoleName: discord.Role):
   
   embed=discord.Embed(title="Channel Created", description=f"Role {RoleName} was deleted", color=0x7a8ad8)
-  embed.set_thumbnail(url="https://en.wikipedia.org/wiki/File:Homemade_marmalade,_England.jpg")
+  
   if ctx.author.guild_permissions.manage_roles:
     await ctx.send(embed=embed)
     await ctx.RoleName.delete()
