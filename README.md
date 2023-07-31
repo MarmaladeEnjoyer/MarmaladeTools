@@ -16,7 +16,7 @@ Prefix: +
 - Yoinks ```<Role>``` ```<User>``` (Remove a role from someone)
 - Purge ```<Number>``` (Deletes certain amount of messages in channel)
 
-- [Invite](https://discord.com/api/oauth2/authorize?client_id=1135397616448979008&permissions=8&scope=bot)
+ [Invite](https://discord.com/api/oauth2/authorize?client_id=1135397616448979008&permissions=8&scope=bot)
 
 # Information
 MarmaladeTools is a work in progress as it is still being developed. I am working on making more commands and will be adding more additional information later.
