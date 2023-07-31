@@ -107,6 +107,12 @@ async def give(ctx, role: discord.Role, user: discord.Member):
 async def yoinks(ctx, role: discord.Role, user: discord.Member):
     if ctx.author.guild_permissions.manage_roles:
         await user.remove_roles(role)
+
+#Purge messages
+@bot.command()
+@commands.has_permissions(manage_channels=True)
+async def purge(ctx, limit: int):
+  await ctx.channel.purge(limit=limit + 1)
     
 
 restore()
