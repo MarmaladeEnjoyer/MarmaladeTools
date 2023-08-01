@@ -1,5 +1,5 @@
 
-<img src="https://i.imgur.com/CXPzFsE.png" width="300">
+<center> <img src="https://i.imgur.com/CXPzFsE.png" width="300"> <center>
 
 # MarmaladeTools
 MarmaladeTools is a multitool Discord bot made in Python.
