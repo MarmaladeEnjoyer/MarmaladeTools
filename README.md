@@ -1,4 +1,4 @@
-![alt text](https://imgur.com/gallery/ee8B7Dy)
+![Purple Marmalade](https://i.imgur.com/CXPzFsE.png)
 
 # MarmaladeTools
 MarmaladeTools is a multitool Discord bot made in Python.
