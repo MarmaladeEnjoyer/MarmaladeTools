@@ -1,5 +1,5 @@
 
-![](https://i.imgur.com/CXPzFsE.png =250x250)
+![dog](https://i.imgur.com/CXPzFsE.png =250x250)
 
 # MarmaladeTools
 MarmaladeTools is a multitool Discord bot made in Python.
