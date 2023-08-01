@@ -1,4 +1,4 @@
-![Purple Marmalade](https://i.imgur.com/CXPzFsE.png | width=100)
+
 ![](https://i.imgur.com/CXPzFsE.png =250x250)
 
 # MarmaladeTools
