@@ -1,11 +1,11 @@
 # MarmaladeTools
-MarmaladeTools is a multitool Discord bot made in Python.
+### MarmaladeTools is a multitool Discord bot made in Python.
 
 
  <img src="https://i.imgur.com/CXPzFsE.png" width="300"> 
 
 
-### Prefix: +
+- ### Prefix: +
 
 # Commands
 - Create ```<Name>``` ```<Category>``` ```<Topic>``` (Creates a new channel)
