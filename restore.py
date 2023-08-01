@@ -1,3 +1,5 @@
+# Using uptimerobot (https://uptimerobot.com) the bot that is running in a repl is pinged every 5 minutes and kept online pretty much all day long. 
+
 from flask import Flask
 from threading import Thread
 
