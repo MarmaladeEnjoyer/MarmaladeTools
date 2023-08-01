@@ -1,6 +1,7 @@
 
-<center> <img src="https://i.imgur.com/CXPzFsE.png" width="300"> <center>
-
+<p align=center 
+ <img src="https://i.imgur.com/CXPzFsE.png" width="300"> 
+</p>
 # MarmaladeTools
 MarmaladeTools is a multitool Discord bot made in Python.
 
