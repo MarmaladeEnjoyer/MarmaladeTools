@@ -1,9 +1,9 @@
 # MarmaladeTools
 MarmaladeTools is a multitool Discord bot made in Python.
 
-<p align="center">
+
  <img src="https://i.imgur.com/CXPzFsE.png" width="300"> 
-</p>
+
 
 Prefix: +
 
